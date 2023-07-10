@@ -5,3 +5,5 @@ This repository contains annotation and adjudication guidelines for pain mention
 File: Annotation Guidelines
 Includes instructions that were followed for the annotation of pain and pain-related terms. 
 It also includes adjudication guidelines.
+
+Publication: https://formative.jmir.org/2023/1/e45849
