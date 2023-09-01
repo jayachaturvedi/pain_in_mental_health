@@ -6,6 +6,9 @@ File: Annotation Guidelines
 Includes instructions that were followed for the annotation of pain and pain-related terms. 
 It also includes adjudication guidelines.
 
+Folder: LDN READ Codes
+This folder contains the READ codes for pain diagnosis, treatment and medication that were used to identify patients with pain within the GP records of Lambeth DataNet.
+
 Publications: 
 
 Development of a Corpus Annotated with Mentions of Pain in Mental Health Records: A Natural Language Processing Approach
