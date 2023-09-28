@@ -10,7 +10,7 @@ Folder: LDN READ Codes
 
 This folder contains the READ codes for pain diagnosis, treatment and medication that were used to identify patients with pain within the GP records of Lambeth DataNet.
 
-Folder: Classifier scripts
+Folder: classifier 
 
 This folder contains the scripts to train the BERT and non-BERT models
 
