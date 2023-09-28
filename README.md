@@ -2,21 +2,24 @@
 
 This repository contains annotation and adjudication guidelines for pain mentions in mental health records, code for calculation of inter-annotator agreements (to be added), code for building various sentence classifiers (to be added), and results from pain studies.
 
-File: Annotation Guidelines
+**File: Annotation Guidelines**
+
 Includes instructions that were followed for the annotation of pain and pain-related terms. 
 It also includes adjudication guidelines.
 
-Folder: LDN READ Codes
+**Folder: LDN READ Codes**
 
 This folder contains the READ codes for pain diagnosis, treatment and medication that were used to identify patients with pain within the GP records of Lambeth DataNet.
 
-Folder: classifier 
+**Folder: classifier**
 
 This folder contains the scripts to train the BERT and non-BERT models
 
-Knowledge Graph Embedding model scripts are located at: https://github.com/jayachaturvedi/pain_kge_model
+**Knowledge Graph Embedding**
 
-Publications: 
+The KGE model scripts are located at: https://github.com/jayachaturvedi/pain_kge_model
+
+**Publications:**
 
 Chaturvedi, J., Stewart, R., Ashworth, M., & Roberts, A. (2023). Distributions of recorded pain in mental health records: A natural language processing based study. MedRxiv. https://doi.org/10.1101/2023.09.15.23295064
 
