@@ -1,0 +1,29 @@
+WITH
+
+#keywords as (select * from
+
+(values
+        ('pain', '%dynia%'),
+        ('pain', '%algia%'),
+        ('pain', '%burn%'),
+        ('pain', '%ache'),
+        ('pain', '%aches'),
+        ('pain', '%sore%'),
+        ('pain', '%spasm%'),
+        ('pain', 'colic%'),
+        ('pain', 'cramp%'),
+        ('pain', 'hurt%'),
+        ('pain', 'sciatic%'),
+        ('pain', 'tender%'),
+        ('pain', '%pain%')
+        ) as t (domain, keyword) ---all keywords
+)
+
+select top 5000 att.unique_doc_ID,att.patient_id,d.dateofbirth, d.ethnicity, d.Gender from SQLDB.dbo.TableName att 
+
+inner join SQLCRIS.dbo.DemographicsTable d on d.patient_id=att.patient_id
+
+inner join #keywords on att.Text like #keywords.keyword 
+
+group by att.patient_id, att.unique_doc_ID, #keywords.keyword, d.Gender, d.dateofbirth, d.ethnicity
+
