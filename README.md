@@ -7,7 +7,12 @@ Includes instructions that were followed for the annotation of pain and pain-rel
 It also includes adjudication guidelines.
 
 Folder: LDN READ Codes
+
 This folder contains the READ codes for pain diagnosis, treatment and medication that were used to identify patients with pain within the GP records of Lambeth DataNet.
+
+Folder: Classifier scripts
+
+This folder contains the scripts to train the BERT and non-BERT models
 
 Knowledge Graph Embedding model scripts are located at: https://github.com/jayachaturvedi/pain_kge_model
 
