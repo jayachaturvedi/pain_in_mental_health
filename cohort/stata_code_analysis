@@ -1,0 +1,124 @@
+
+// all cohort data //
+
+
+*load file 
+
+import delimited "path\to\file\all_cohorot_data.csv"
+
+
+*age median (50%) and IQR (23% to 75%)
+
+summarize age, detail format
+ 
+
+*recode variables
+
+generate gender_num = gender
+
+replace gender_num ="0" if gender_num=="Male"
+
+replace gender_num ="1" if gender_num == "Female"
+
+replace gender_num ="9" if gender_num == "Not Known"|gender_num == "Not Specified"|gender_num == "Other"
+
+destring gender_num, replace
+
+ 
+
+*gender graph
+ 
+
+generate gender_clean = gender
+
+drop if gender_clean == "Not Known"
+
+drop if gender_clean == "Not Specified"
+
+drop if gender_clean == "Other"
+
+ 
+
+*some tables
+ 
+
+by final_preds, sort : tabulate gender_num 
+
+by final_preds , sort : summarize age, detail format
+
+by final_preds, sort : tabulate ethnicity_groups
+
+by final_preds, sort : tabulate imd_decile_2019_clean
+
+by final_preds, sort : tabulate smi_nonsmi
+
+ 
+
+// prepare for logistic regression
+
+ 
+generate age_per_10_yr= age/10
+
+logistic final_preds age_per_10_yr
+
+ 
+gsort -gender , generate(newvar_gender) //not needed
+
+logistic final_preds i.gender_num
+
+ 
+egen numeric_ethnicity_clean = group(ethnicity_groups )
+
+gsort -numeric_ethnicity_clean , generate(newvar_ethnicity2)
+
+logistic final_preds i.newvar_ethnicity2
+
+ 
+
+egen numeric_imd = group(imd_decile_2019_clean)
+
+drop if numeric_imd2 == 3
+
+gsort -numeric_imd , generate(newvar_numeric_imd)
+
+logistic final_preds i.newvar_numeric_imd
+
+ 
+egen numeric_sminonsmi = group(smi_nonsmi)
+
+gsort -numeric_sminonsmi  , generate(newvar_numeric_sminonsmi)
+
+logistic final_preds i.newvar_numeric_sminonsmi
+
+ 
+
+//model 1
+
+logistic final_preds age_per_10_yr i.gender_num i.newvar_ethnicity2
+
+ 
+//model 2
+
+logistic final_preds age_per_10_yr i.gender_num i.newvar_ethnicity2 i.newvar_numeric_imd , baselevels
+
+
+//model 3
+
+logistic final_preds age_per_10_yr i.gender_num i.newvar_ethnicity2 i.newvar_numeric_imd i.newvar_numeric_sminonsmi , baselevels
+
+ 
+//model 4
+
+logistic final_preds i.newvar_ethnicity2 i.newvar_numeric_imd, baselevels
+
+ 
+
+//graphs
+
+ssc install blindschemes
+
+twoway (kdensity age if final_preds  == 0, lcolor(blue)) (kdensity age if final_preds  == 1, lcolor(red)), scheme(plotplainblind) legend(lab(1 " Class: 0") lab(2 "Class: 1"))
+
+ 
+
+ 
