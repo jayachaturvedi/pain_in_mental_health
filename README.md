@@ -15,6 +15,10 @@ This folder contains the READ codes for pain diagnosis, treatment and medication
 
 This folder contains the scripts to train the BERT and non-BERT models
 
+**Folder: cohort**
+
+This folder contains scripts to explore the descriptives of the cohort in question, and generate venn diagrams to examine various overlaps
+
 **Knowledge Graph Embedding**
 
 The KGE model scripts are located at: https://github.com/jayachaturvedi/pain_kge_model
