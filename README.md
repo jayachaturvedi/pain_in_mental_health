@@ -7,6 +7,10 @@ This repository contains annotation and adjudication guidelines for pain mention
 Includes instructions that were followed for the annotation of pain and pain-related terms. 
 It also includes adjudication guidelines.
 
+**File: SQL_query_for_dco_extraction**
+
+This is the SQL query that was used to extract documents for the annotation exercise.
+
 **Folder: LDN READ Codes**
 
 This folder contains the READ codes for pain diagnosis, treatment and medication that were used to identify patients with pain within the GP records of Lambeth DataNet.
@@ -17,7 +21,7 @@ This folder contains the scripts to train the BERT and non-BERT models
 
 **Folder: cohort**
 
-This folder contains scripts to explore the descriptives of the cohort in question, and generate venn diagrams to examine various overlaps
+This folder contains scripts to explore the descriptives of the cohort in question, and generate venn diagrams to examine various overlaps. Also includes STATA code for logistic regression analysis.
 
 **Knowledge Graph Embedding**
 
