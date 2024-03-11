@@ -1,5 +1,15 @@
 # pain_in_mental_health
 
+**Website**
+
+https://sites.google.com/view/pain-mental-health/ 
+![image](https://github.com/jayachaturvedi/pain_in_mental_health/assets/47827995/357c8c2e-0aa2-4f41-8344-f28ceab6a428)
+
+**Blog**
+
+https://www.maudsleybrc.nihr.ac.uk/posts/2023/august/identifying-mentions-of-pain-in-mental-health-records-text-a-natural-language-processing-approach/ ![image](https://github.com/jayachaturvedi/pain_in_mental_health/assets/47827995/12c2fda5-ec6e-4e7e-aeca-b1dcbf2c9e0a)
+
+
 This repository contains annotation and adjudication guidelines for pain mentions in mental health records, code for calculation of inter-annotator agreements (to be added), code for building various sentence classifiers (to be added), and results from pain studies.
 
 **File: Annotation Guidelines**
