@@ -35,7 +35,7 @@ The KGE model scripts are located at: https://github.com/jayachaturvedi/pain_kge
 
 **Publications:**
 
-Chaturvedi, J., Stewart, R., Ashworth, M., & Roberts, A. (2023). Distributions of recorded pain in mental health records: A natural language processing based study. MedRxiv. https://doi.org/10.1101/2023.09.15.23295064
+Chaturvedi, J., Stewart, R., Ashworth, M., & Roberts, A. (2023). Distributions of recorded pain in mental health records: A natural language processing based study. BMJOpen [https://doi.org/10.1101/2023.09.15.23295064](https://bmjopen.bmj.com/content/14/4/e079923)
 
 Chaturvedi, J., Wang, T., Velupillai, S., Stewart, R., & Roberts, A. (2023). Development of a Knowledge Graph Embeddings Model for Pain. Accepted at AMIA 2023. ArXiv. https://doi.org/10.48550/arxiv.2308.08904
 
